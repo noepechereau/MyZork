@@ -11,14 +11,24 @@ CONFIG += c++11
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
-    rooms.cpp
+    object.cpp \
+    player.cpp \
+    task.cpp \
+    whitehouse.cpp \
+    wordle.cpp
 
 HEADERS += \
     mainwindow.h \
-    rooms.h
+    object.h \
+    player.h \
+    task.h \
+    whitehouse.h \
+    wordle.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    whitehouse.ui \
+    wordle.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

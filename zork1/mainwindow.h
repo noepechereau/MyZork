@@ -2,6 +2,18 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "player.h"
+#include "ui_mainwindow.h"
+#include "dialog.h"
+#include <QPixmap>
+#include "object.h"
+#include "whitehouse.h"
+#include "wordle.h"
+
+#include <QApplication>
+
+#include <iostream>
+using namespace std;
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -11,16 +23,17 @@ class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
-public:
+public :
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     Ui::MainWindow *ui;
-    void setroom();
-    void setimages();
+    void openNewWindow();
+    int setposition();
+    void setmap();
+    whitehouse wh;
+    wordle wd ;
 
 private slots:
-
-
     void on_upButton_clicked();
 
     void on_downButton_clicked();
@@ -28,12 +41,6 @@ private slots:
     void on_rightButton_clicked();
 
     void on_leftButton_clicked();
-
-    void on_roomButtton_clicked();
-
-
-
-
-
+    int on_interactbutton_clicked();
 };
 #endif // MAINWINDOW_H
